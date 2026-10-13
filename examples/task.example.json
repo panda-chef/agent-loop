@@ -1,0 +1,19 @@
+{
+  "id": "task-001",
+  "repo": "/path/to/your/repo",
+  "base": "main",
+  "branch": "feature/add-source-field",
+  "description": "给实体新增 source 字段，同步更新 Mapper 与 DTO，保持接口兼容",
+  "acceptance": [
+    "编译通过",
+    "新增字段有默认值，老数据不受影响"
+  ],
+  "verify_cmd": [
+    "mvn",
+    "compile",
+    "-DskipTests"
+  ],
+  "max_retries": 3,
+  "auto_merge": false,
+  "_comment": "复制到 tasks/<你的任务>.json 后修改；verify_cmd 换成你项目真实的构建/测试命令"
+}
